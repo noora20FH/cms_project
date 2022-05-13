@@ -21,3 +21,4 @@ Route::resource('articles',ArticleController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/article/print_pdf',[ArticleController::class,'print_pdf'])->name('print_pdf');
