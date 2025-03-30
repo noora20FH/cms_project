@@ -14,11 +14,11 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::resource('articles',ArticleController::class);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\ArticleController::class, 'index'])->name('home');
 Route::get('/article/print_pdf',[ArticleController::class,'print_pdf'])->name('print_pdf');
